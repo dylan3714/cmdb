@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <a href="{% url 'create_server' %}" class="btn btn-primary">新增服务器</a>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>主机名</th>
+          <th>业务线</th>
+          <th>IDC</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in server_list %}
+          <tr>
+            <td>{{ row.hostname }}</td>
+            <td>{{ row.business_unit.name }}</td>
+            <td>{{ row.idc.name }}({{ row.idc.floor }}层)</td>
+            <td>{{ row.get_status_display }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

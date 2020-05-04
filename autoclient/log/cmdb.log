@@ -1,0 +1,20 @@
+2019-10-30 10:14:42,696 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "E:\wupeiqi\autoclient\lib\plugins\disk.py", line 16, in process
+    result = int('asdf')
+ValueError: invalid literal for int() with base 10: 'asdf'
+
+2019-10-30 11:24:39,595 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "E:\wupeiqi\autoclient\lib\plugins\disk.py", line 16, in process
+    result.data = int('asdf')
+ValueError: invalid literal for int() with base 10: 'asdf'
+
+2019-10-30 11:37:13,756 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "E:\wupeiqi\autoclient\lib\plugins\network.py", line 19, in process
+    cmd1 = ssh('sudo ip link show')
+TypeError: ssh() missing 1 required positional argument: 'cmd'
+
+2019-10-30 11:37:30,455 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "E:\wupeiqi\autoclient\lib\plugins\network.py", line 19, in process
+    cmd1 = ssh('sudo ip link show')
+TypeError: ssh() missing 1 required positional argument: 'cmd'
+
